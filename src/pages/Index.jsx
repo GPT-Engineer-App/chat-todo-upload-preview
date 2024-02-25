@@ -43,23 +43,6 @@ const Index = () => {
   return (
     <ChakraProvider>
       <VStack spacing={8}>
-        {/* Chat App */}
-        <Box w="full" p={5} shadow="md" borderWidth="1px">
-          <VStack>
-            <Box w="full" p={3} bg="gray.100">
-              {chats.map((chat, index) => (
-                <Text key={index} bg="blue.100" p={2} my={1} borderRadius="md">
-                  {chat}
-                </Text>
-              ))}
-            </Box>
-            <HStack w="full">
-              <Input placeholder="Type a message..." value={message} onChange={(e) => setMessage(e.target.value)} onKeyPress={(e) => e.key === "Enter" && sendMessage()} />
-              <IconButton icon={<FaPaperPlane />} onClick={sendMessage} aria-label="Send message" />
-            </HStack>
-          </VStack>
-        </Box>
-
         {/* Todo List */}
         <Box w="full" p={5} shadow="md" borderWidth="1px">
           <VStack>
